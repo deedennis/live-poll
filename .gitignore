@@ -7,7 +7,7 @@ nul
 node_modules/
 npm-debug.log*
 
-# Android / IDE
+# IDE / build
 .gradle/
 .idea/
 *.iml

@@ -1,0 +1,35 @@
+services:
+  - type: mongodb
+    name: poll-app-db
+  - type: web
+    name: poll-app-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DB_CONNECTION
+        fromService:
+          type: mongodb
+          name: poll-app-db
+          property: connectionString
+      - key: JWT_PRIVATE
+        value: change-this-to-a-secure-secret
+      - key: SALT_ROUNDS
+        value: 10
+      - key: CLIENT_URL
+        fromService:
+          type: web
+          name: poll-app-frontend
+          property: host
+  - type: web
+    name: poll-app-frontend
+    runtime: static
+    buildCommand: npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_ENV
+        value: production

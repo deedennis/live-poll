@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: poll-app-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DB_CONNECTION
+        value: mongodb://your-mongodb-connection-string
+      - key: JWT_PRIVATE
+        value: change-this-to-a-secure-secret
+      - key: SALT_ROUNDS
+        value: 10
+      - key: CLIENT_URL
+        value: https://your-frontend-url.onrender.com
