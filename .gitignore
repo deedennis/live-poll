@@ -1,0 +1,18 @@
+# Windows system files
+ntuser.*
+desktop.ini
+nul
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Android / IDE
+.gradle/
+.idea/
+*.iml
+build/
+
+# OS
+.DS_Store
+Thumbs.db
