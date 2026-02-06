@@ -147,7 +147,7 @@ const socket = io("http://localhost:3000")
 
 <div align="center">
 
-Made with ❤️ by [Mwaki Denis](https://github.com/mwakidenis)
+Made with ❤️ by [Victor denis](https://github.com/mwakidenis)
 
 [Live Demo](https://live-poll-wine.vercel.app/)
 
